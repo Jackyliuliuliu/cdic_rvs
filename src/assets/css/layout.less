@@ -1,0 +1,312 @@
+﻿/*---------------------------------Flex Layout--------------------------------------------------*/
+.FlexCol {.FlexCol}
+.FlexRow {.FlexRow;}
+.flow {.flow}
+.Fill0 {.Fill(initial) !important;}
+.Fill {.Fill}
+.Fill2 {.Fill(2) !important;}
+.Fill3 {.Fill(3) !important;}
+.Fill4 {.Fill(4) !important;}
+.Fill5 {.Fill(5) !important;}
+.FlexCol(@flex:flex,@Row:row,@wrap:nowrap) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+    display: @flex;
+	-webkit-box-orient: horizontal;
+	//horizontal    vertical
+	-moz-box-direction: @Row;
+	-ms-flex-direction: @Row;
+	-webkit-flex-direction: @Row;
+	flex-direction: @Row;
+	-webkit-box-wrap: @wrap;
+	-moz-box-wrap: @wrap;
+	-ms-flex-wrap: @wrap;
+	-webkit-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+.FlexRow(@flex:flex,@Col:column,@wrap:nowrap) {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+    display: @flex;
+	-webkit-box-orient: vertical;
+	-moz-box-direction: @Col;
+	-ms-flex-direction: @Col;
+	-webkit-flex-direction: @Col;
+	flex-direction: @Col;
+	-webkit-box-wrap: @wrap;
+	-moz-box-wrap: @wrap;
+	-ms-flex-wrap: @wrap;
+	-webkit-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+.flow(@flex: row,@flow: nowrap) {
+	-webkit-box-orient: horizontal;
+	-moz-box-direction: @flex;
+	-ms-flex-direction: @flex;
+	flex-direction: @flex;
+	-webkit-flex-wrap: @flow;
+	-moz-flex-wrap: @flow;
+	-ms-flex-wrap: @flow;
+	-o-flex-wrap: @flow;
+	flex-wrap: @flow;
+}
+.Fill(@fill:1) {
+    -webkit-box-flex: @fill;
+    -moz-box:@fill;
+	-webkit-flex: @fill;
+    -ms-flex: @fill;
+    flex: @fill;
+}
+.ellipsis{
+    display: inline;
+    zoom: 1;     
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+/*---------------------------------LayOut--------------------------------------------------*/
+.MenuItem, .Content {
+        li {
+            position: relative;
+            float: left;
+            & > a, & > label {
+                clear: both;
+                display: block;
+                color: #525e66;
+
+                &.P20_L {
+                    padding-left: 20px;
+                }
+            }
+
+            & > div {
+                & > label {
+                    color: #525e66;
+                }
+
+                & > a {
+                    color: #525e66;
+
+                    & > span {
+                        width: 12px;
+                        height: 12px;
+                        font-size: 14px;
+                        color: #0D47A1;
+                    }
+                }
+            }
+
+            & > input, & > button, & > select, & > textarea {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            & > .Auto {
+                width: auto;
+            }
+
+            .gray {
+                border: 1px solid #a1a9b3;
+                background-color: #a1a9b3;
+                color: white;
+                padding: 0 4px;
+                margin-top: 2px;
+            }
+
+            .info_meg {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                opacity: 0;
+                transition-property: opacity;
+                color: red;
+            }
+
+            & > span.info_meg {
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+            &.M0_T {
+                margin-top: 0;
+            }
+        }
+
+        h4 {
+            border-bottom: 1px solid #A1A9B3;
+            line-height: 40px;
+            margin: 0 2%;
+            padding-top: 20px;
+            clear: both;
+            color: #525e66;
+            font-size: 14px;
+            font-weight: bold;
+
+            img, span {
+                width: 16px;
+                height: 16px;
+
+                &.M15_L {
+                    margin-left: 15px;
+                    cursor: pointer;
+                }
+            }
+
+                span[class^="icon-"], a[class^="icon-"] {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+
+            &.PT_10 {
+                padding-top: 10px;
+            }
+
+            &.PT_18 {
+                padding-top: 18px;
+            }
+        }
+
+        hr {
+            width: 96%;
+        }
+    }
+.MenuItem {
+        margin: 0;
+        -webkit-box-flex: 1;
+        -moz-box:1;
+	    -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        overflow-x: hidden;
+
+        & > .row > li {
+            width: 21%;
+        }
+    }
+.Content {
+        background-color: transparent;
+        overflow: auto;
+
+        ul {
+            margin: 0 1.5%;
+
+            &.content {
+                margin-left: 4%;
+                margin-right: 4%;
+            }
+        }
+
+        li {
+            margin: 10px 0;
+            min-height: 62px;
+
+            & > span[class^="icon-"] {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 0 4px;
+                border: 1px solid transparent;
+                cursor: pointer;
+            }
+
+            & > span.icon {
+                width: 16px;
+                height: 16px;
+                padding: 0;
+                margin-right: 6px;
+                margin-bottom: 16px;
+            }
+        }
+
+        ol {
+             display: -webkit-box;
+             display: -moz-box;
+             display: -ms-flexbox;
+	         display: -moz-flex;
+	         display: -webkit-flex;
+             display: flex;
+	         -webkit-box-orient: horizontal;
+	         -moz-box-direction: row;
+	         -ms-flex-direction: row;
+	         -webkit-flex-direction: row;
+	         flex-direction: row;
+	         -webkit-box-wrap: nowrap;
+	         -moz-box-wrap: nowrap;
+	         -ms-flex-wrap: nowrap;
+	         -webkit-flex-wrap: nowrap;
+	         flex-wrap: nowrap;
+            li {
+                min-height: 0;
+                -webkit-box-flex: 1;
+                -moz-box:1;
+	            -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            del {
+                width: 80px;
+                line-height: 30px;
+                margin: 10px 0;
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 14px;
+                opacity: 0;
+            }
+
+            &:hover del, &.searchListS del {
+                color: red;
+                opacity: 1;
+            }
+        }
+    }
+.Content > .row > li {
+    width: 29.3%;
+}
+.row {
+    margin-left: -2%;
+    margin-right: -2%;
+}
+.Content, .MenuItem {
+        li {
+            margin: 10px 2%;
+
+            &.M0_B {
+                margin-bottom: 0;
+            }
+
+            &.col1_3 {
+                width: 29.3%;
+            }
+
+            &.col1_4 {
+                width: 21%;
+            }
+
+            &.col1_2 {
+                width: 46%;
+            }
+
+            &.col2_3 {
+                width: 62.6%;
+            }
+
+            &.col3_4 {
+                width: 71%;
+            }
+
+            &.colFill {
+                width: 96%;
+            }
+
+            &.clear {
+                clear: left;
+            }
+        }
+}

@@ -1,0 +1,1106 @@
+<!-- NG-ZORRO -->
+
+<!--<div class="wFill text-center">
+  <button nz-button nzType="primary">RT</button> 
+</div>
+<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
+  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
+</a>-->
+<div class="FlexRow main">
+  <header class="header FlexCol">
+    <label class="header_label"><span>Icon</span><span class="M15_L">Radiotherapy CloudCollection
+        Platform</span></label>
+    <ul class="header_ul">
+      <nz-dropdown [nzTrigger]="'click'">
+        <a nz-dropdown class="user-menu">
+          <img class="avatar"
+            src="http://10.6.60.49/core/ued/sketch/sketch/2S2jOp1469980800000/8q38qj1556121600000/icons/266A14C0-899E-4624-A4F4-DF55A9D5E97C.svg">
+          James Grid
+          <i nz-icon type="down" class="avatar-icon"></i>
+        </a>
+        <ul nz-menu>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>disabled menu item</li>
+        </ul>
+      </nz-dropdown>
+      <li class="header_ul_li"><i>Icon</i></li>
+      <li class="header_ul_li"><i>Icon</i></li>.
+      <li class="header_ul_li"><i>Icon</i></li>
+      <li class="header_ul_li"><i>Icon</i></li>
+      <li class="header_ul_li"><i>Icon</i></li>
+    </ul>
+  </header>
+  <main class="hFill Fill FlexRow">
+    <ng-template #extraTemplate class="left-tab-menu">
+      <nz-dropdown [nzTrigger]="'click'" class="nz-dropdown-style">
+        <a nz-dropdown>{{menuVal}}<i nz-icon type="double-right" class="extra-icon"></i></a>
+        <ul nz-menu>
+          <li nz-menu-item (click)="log('TMS')">TMS</li>
+          <li nz-menu-item (click)="log('OEM')">OEM</li>
+          <li nz-menu-item (click)="log('TPS')">TPS</li>
+        </ul>
+      </nz-dropdown>
+    </ng-template>
+    <nz-tabset class="hFill Fill FlexRow" [nzTabBarExtraContent]="extraTemplate">
+      <nz-tab nzTitle="Record">
+        <div class="record-content FlexRow">
+          <div class="top-toolbar FlexCol">
+            <div class="Fill left-toolbar FlexCol">
+              <div class="tool-box">
+                <span class="tool-icon">icon</span>
+                <p class="text">Add</p>
+              </div>
+              <div class="tool-box">
+                <span class="tool-icon">icon</span>
+                <p class="text">Delete</p>
+              </div>
+              <div class="tool-box">
+                <span class="tool-icon">icon</span>
+                <p class="text">Write</p>
+              </div>
+              <div class="tool-box">
+                <span class="tool-icon">icon</span>
+                <p class="text">Approve</p>
+              </div>
+              <div class="tool-box">
+                <label class="tool-checkbox" nz-checkbox></label>
+                <p class="text">Hide Gap</p>
+              </div>
+            </div>
+            <div class="right-search FlexRow">
+              <div class="input-box FlexCol">
+                <span class="search-icon">s</span>
+                <input class="search-input Fill" type="text" placeholder="请输入病人名字或ID" />
+              </div>
+              <div class="patient-info FlexCol Fill">
+                <img class="left-avatar"
+                  src="http://10.6.60.49/core/ued/sketch/sketch/2S2jOp1469980800000/8q38qj1556121600000/icons/266A14C0-899E-4624-A4F4-DF55A9D5E97C.svg" />
+                <div class="right-info Fill">
+                  <p class="patient-name">Tom Jackson<span class="gender-icon">M</span></p>
+                  <p class="patient-ID">20182233098847443</p>
+                  <p class="patient-time">2018/12/13</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="record-bottom-content Fill FlexRow">
+            <div class="record-top-calendar">
+              <!-- <nz-table #fixedTable [nzData]="dateList" [nzShowPagination]="false" [nzScroll]="{ x: '100%', y: '240px' }">
+                    <thead>
+                      <tr>
+                        <th nzWidth="140px" nzLeft="0px">Full Name</th>
+                        <th nzWidth="30px">Column 1</th>
+                        <th nzWidth="30px">Column 2</th>
+                        <th nzWidth="30px">Column 3</th>
+                        <th nzWidth="30px">Column 4</th>
+                        <th nzWidth="30px">Column 5</th>
+                        <th nzWidth="30px">Column 6</th>
+                        <th nzWidth="30px">Column 7</th>
+                        <th nzWidth="30px">Column 8</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of fixedTable.data">
+                        <td nzWidth="140px" nzLeft="0px">{{ data.name }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                        <td nzWidth="30px">{{ data.age }}</td>
+                      </tr>
+                    </tbody>
+                  </nz-table> -->
+
+
+                  <!-- <nz-table #fixedTable [nzData]="dateList" [nzShowPagination]="false" [nzScroll]="{ x: '100%', y: '304px' }">
+                      <thead>
+                        <tr *ngFor="let data of dateList">
+                          <th nzLeft="0px" nzWidth="140px">{{data.name}}</th>
+                          <th nzWidth="30px" *ngFor="let listD1 of data.list">{{ listD1 }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let data of fixedTable.data">
+                          <td nzWidth="140px" nzLeft="0px">{{ data.name }}</td>
+                          <td nzWidth="30px" *ngFor="let listD of data.list">{{ listD }}</td>
+                        </tr>
+                      </tbody>
+                    </nz-table> -->
+
+              <nz-table #expandTable [nzData]="listOfMapData" [nzShowPagination]="false"
+                [nzScroll]="{ x: '100%', y: '304px' }">
+                <thead>
+                  <tr *ngFor="let data of dateList">
+                    <th nzLeft="0px"><span class="name-td">{{ data.name }}</span></th>
+                    <th *ngFor="let listD1 of data.list">
+                      <div class="value-div FlexCol" [class.small-text]="listD1.value.length > 3">
+                        <span class="value-td">{{ listD1.value }}</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let data of expandTable.data">
+                    <ng-container *ngFor="let item of mapOfExpandedData[data.key]">
+                      <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
+
+                        <td nzLeft="0px"[nzShowExpand]="!!item.children"
+                          [(nzExpand)]="item.expand"
+                          [class.parent-node]="!!item.children"
+                          (nzExpandChange)="collapse(mapOfExpandedData[data.key], item, $event)">
+                          <span class="name-td">{{ item.name }}</span>
+                        </td>
+                        <ng-container *ngIf="(item.parent && item.parent.expand) || !item.parent; else elseTd">
+                          <td *ngFor="let listD of item.list">
+                            <div class="value-div FlexCol" [class.green-node]="listD.status === 1" 
+                            [class.blue-node]="listD.status === 2" [class.warning-node]="listD.status === 3"
+                            [class.error-node]="listD.status === 4">
+                                <span class="value-td" *ngIf="listD.value" [nzTitle]="titleTemplate" nzPlacement="bottom" nz-tooltip>{{ listD.value }}</span>
+                                <span class="value-td transparent-text" *ngIf="!listD.value">0</span>
+                            </div>
+                            <ng-template #titleTemplate>
+                              <div class="tooltip-template">
+                                <p>{{listD.count}}</p>
+                                <p class="middle-text">{{listD.info}}</p>
+                                <p>{{listD.msgType}}</p>
+                              </div>
+                            </ng-template>
+                          </td>
+                        </ng-container>
+                        <ng-template #elseTd>
+                          <td *ngFor="let listD of item.list">
+                            <div class="value-div FlexCol" [class.green-node]="listD.status === 1" 
+                            [class.blue-node]="listD.status === 2" [class.warning-node]="listD.status === 3"
+                            [class.error-node]="listD.status === 4">
+                                <span class="value-td" *ngIf="listD.value">{{ listD.value }}</span>
+                                <span class="value-td transparent-text" *ngIf="!listD.value">0</span>
+                            </div>
+                          </td>
+                        </ng-template>
+                      </tr>
+                    </ng-container>
+                  </ng-container>
+                </tbody>
+              </nz-table>
+            </div>
+            <div class="record-bottom-table Fill">2</div>
+          </div>
+        </div>
+      </nz-tab>
+      <nz-tab nzTitle="Beam Definition">
+        <div class="FlexCol beam-definition">
+          <div class="left-menu">
+            <div class="button-box FlexCol">
+              <button nz-button [nzSize]="small" nzType="default">1</button>
+              <button nz-button [nzSize]="small" nzType="default">2</button>
+              <button nz-button [nzSize]="small" nzType="default">3</button>
+              <button nz-button [nzSize]="small" nzType="default">4</button>
+              <button nz-button [nzSize]="small" nzType="default">5</button>
+              <button nz-button [nzSize]="small" nzType="default">6</button>
+            </div>
+            <nz-tree [nzData]="nodes" (nzClick)="activeNode($event)">
+            </nz-tree>
+          </div>
+          <div class="right-content Fill FlexRow ">
+            <div class="top-toolbar FlexCol">
+              <div class="Fill left-toolbar FlexCol">
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">Import</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">导出</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">Print</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">批准</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">不批准</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">查看记录</p>
+                </div>
+              </div>
+              <div class="right-search FlexRow">
+                <div class="input-box FlexCol">
+                  <span class="search-icon">s</span>
+                  <input class="search-input Fill" type="text" placeholder="请输入病人名字或ID" />
+                </div>
+                <div class="patient-info FlexCol Fill">
+                  <img class="left-avatar"
+                    src="http://10.6.60.49/core/ued/sketch/sketch/2S2jOp1469980800000/8q38qj1556121600000/icons/266A14C0-899E-4624-A4F4-DF55A9D5E97C.svg" />
+                  <div class="right-info Fill">
+                    <p class="patient-name">Tom Jackson<span class="gender-icon">M</span></p>
+                    <p class="patient-ID">20182233098847443</p>
+                    <p class="patient-time">2018/12/13</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Fill FlexCol bottom-info">
+
+              <nz-anchor class="anchor-box" [nzTarget]="scrollBottom" [nzAffix]="false">
+                <nz-link nzHref="#basiInfo" nzTitle="Basi Info"></nz-link>
+                <nz-link nzHref="#dose" nzTitle="剂量"></nz-link>
+                <nz-link nzHref="#prescriptionSetting" nzTitle="关联处方设置"></nz-link>
+                <nz-link nzHref="#approval" nzTitle="Approval"></nz-link>
+                <nz-link nzHref="#rayList" nzTitle="射线列表"></nz-link>
+                <nz-link nzHref="#setupInfo" nzTitle="Setup Info"></nz-link>
+                <nz-link nzHref="#ReferencedSetupImageSequence" nzTitle="Referenced setup image sequence"></nz-link>
+                <nz-link nzHref="#offSet" nzTitle="Off Set"></nz-link>
+                <nz-link nzHref="#FixationDeviceSequence" nzTitle="Fixation Device Sequence"></nz-link>
+                <nz-link nzHref="#MotionSynchronization" nzTitle="Motion Synchronization"></nz-link>
+              </nz-anchor>
+
+              <ul class="common-info-ul" #scrollBottom>
+                <li class="common-info-li" id="basiInfo">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Basi Info'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Beam Group Name</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Machine</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">辐射类型</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">技术</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-textarea-box FlexCol">
+                            <div class="left-label">射野组描述</div>
+                            <div class="right-textarea"><textarea rows="4" nz-input placeholder="请填写"></textarea></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="dose">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'剂量'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">分次剂量（cGy）</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">总剂量（cGy）</div>
+                            <div class="right-input FlexCol"><input nz-input placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="flex-relation-btn">
+                          <button class="relation-btn" nz-button [nzSize]="small" nzType="default">关联处方</button>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">分次数</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-textarea-box FlexCol">
+                            <div class="left-label">目标靶区</div>
+                            <div class="right-textarea"><textarea rows="4" nz-input [(ngModel)]="value"
+                                [disabled]="true" placeholder="xxxxxxxxxx"></textarea></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="prescriptionSetting">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'关联处方设置'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联部位</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Rx 描述</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">技术</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联的疗程</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联的Rx</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">辐射类型</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">目标靶区</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="approval">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Approval'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">是否批准</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">批准用户</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">批准日期时间</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="rayList">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'射线列表'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable.data">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                        <div class="flex-checkbox-div FlexCol">
+                          <span class="checkbox-import">*</span>
+                          <label class="tms-label-checkbox" nz-checkbox [(ngModel)]="checked">确认射线信息无误后勾选此框</label>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="setupInfo">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Setup Info'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient position</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient additional position</div>
+                            <div class="right-input"><input nz-input placeholder="xxxxxxxxxx" [(ngModel)]="value"
+                                [disabled]="true"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient setup label</div>
+                            <div class="right-input"><input nz-input placeholder="请输入"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="ReferencedSetupImageSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Referenced Setup Image Sequence'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="flex-add-imgae-div">
+                          <div class="image-info-div FlexRow">
+                            <div class="image-preview-div Fill FlexCol">
+                              <p class="prev-btn" (click)="pre('1111')">&lt;</p>
+                              <nz-carousel [nzDots]="false">
+                                <div class="carousel-img-div" nz-carousel-content *ngFor="let index of imageArray">
+                                  <img class="carousel-img" src="" alt="{{index}}" />
+                                </div>
+                              </nz-carousel>
+                              <p class="next-btn">&gt;</p>
+                            </div>
+                            <div class="img-info">
+                              <span>1</span>/<span>{{imageArray.length}}</span>
+                            </div>
+                          </div>
+                          <div class="flex-btn-div FlexCol">
+                            <button class="add-btn" nz-button nzType="primary">add</button>
+                            <button class="delete-btn" nz-button nzType="primary">delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="offSet">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Off Set'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable1 [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable1.data; index as i;">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="FixationDeviceSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Fixation Device Sequence'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable2 [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable2.data; index as i;">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="MotionSynchronization">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Motion Synchronization'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">呼吸门控</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Motion compensation Technique</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Technique Description</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source ID</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nz-tab>
+      <nz-tab nzTitle="Beam Parameters">
+        <div class="FlexCol beam-definition">
+          <div class="left-menu">
+            <div class="button-box FlexCol">
+              <button nz-button [nzSize]="small" nzType="default">1</button>
+              <button nz-button [nzSize]="small" nzType="default">2</button>
+              <button nz-button [nzSize]="small" nzType="default">3</button>
+              <button nz-button [nzSize]="small" nzType="default">4</button>
+              <button nz-button [nzSize]="small" nzType="default">5</button>
+              <button nz-button [nzSize]="small" nzType="default">6</button>
+            </div>
+            <nz-tree [nzData]="nodes" (nzClick)="activeNode($event)">
+            </nz-tree>
+          </div>
+          <div class="right-content Fill FlexRow ">
+            <div class="top-toolbar FlexCol">
+              <div class="Fill left-toolbar FlexCol">
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">Import</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">导出</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">Print</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">批准</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">不批准</p>
+                </div>
+                <div class="tool-box">
+                  <span class="tool-icon">icon</span>
+                  <p class="text">查看记录</p>
+                </div>
+              </div>
+              <div class="right-search FlexRow">
+                <div class="input-box FlexCol">
+                  <span class="search-icon">s</span>
+                  <input class="search-input Fill" type="text" placeholder="请输入病人名字或ID" />
+                </div>
+                <div class="patient-info FlexCol Fill">
+                  <img class="left-avatar"
+                    src="http://10.6.60.49/core/ued/sketch/sketch/2S2jOp1469980800000/8q38qj1556121600000/icons/266A14C0-899E-4624-A4F4-DF55A9D5E97C.svg" />
+                  <div class="right-info Fill">
+                    <p class="patient-name">Tom Jackson</p>
+                    <p class="patient-ID">20182233098847443</p>
+                    <p class="patient-time">2018/12/13</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Fill FlexCol bottom-info">
+
+              <nz-anchor class="anchor-box" [nzTarget]="beamParameter" [nzAffix]="false">
+                <nz-link nzHref="#basicInfo" nzTitle="Basic Info"></nz-link>
+                <nz-link nzHref="#output" nzTitle="output"></nz-link>
+                <nz-link nzHref="#gantry" nzTitle="gantry"></nz-link>
+                <nz-link nzHref="#patientsupport" nzTitle="Patient Support"></nz-link>
+                <nz-link nzHref="#BeamLimitingDeviceSequence" nzTitle="Beam Limiting Device Sequence"></nz-link>
+                <nz-link nzHref="#imaging" nzTitle="Imaging"></nz-link>
+                <nz-link nzHref="#wedgeSequence" nzTitle="wedge sequence"></nz-link>
+                <nz-link nzHref="#boli" nzTitle="boli"></nz-link>
+                <nz-link nzHref="#blockSequence" nzTitle="block sequence"></nz-link>
+                <nz-link nzHref="#applicatorSequence" nzTitle="applicator sequence"></nz-link>
+                <nz-link nzHref="#referencedPatientSetupNumber" nzTitle="referenced patient setup number"></nz-link>
+              </nz-anchor>
+
+              <ul class="common-info-ul" #beamParameter>
+                <li class="common-info-li" id="basicInfo">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Basic Info'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Beam Group Name</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-input-box error FlexCol">
+                            <div class="left-label">Machine</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">辐射类型</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">技术</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-textarea-box FlexCol">
+                            <div class="left-label">射野组描述</div>
+                            <div class="right-textarea"><textarea rows="4" nz-input placeholder="请填写"></textarea></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="output">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'剂量'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">分次剂量（cGy）</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">总剂量（cGy）</div>
+                            <div class="right-input FlexCol"><input nz-input placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">分次数</div>
+                            <div class="right-input"><input nz-input placeholder="请填写"></div>
+                          </div>
+                          <div class="common-textarea-box FlexCol">
+                            <div class="left-label">目标靶区</div>
+                            <div class="right-textarea"><textarea rows="4" nz-input [(ngModel)]="value"
+                                [disabled]="true" placeholder="xxxxxxxxxx"></textarea></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="gantry">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'关联处方设置'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联部位</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Rx 描述</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">技术</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联的疗程</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">关联的Rx</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">辐射类型</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">目标靶区</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="patientsupport">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Approval'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">是否批准</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">批准用户</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">批准日期时间</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="BeamLimitingDeviceSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'射线列表'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable3 [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable3.data">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                        <div class="flex-checkbox-div FlexCol">
+                          <span class="checkbox-import">*</span>
+                          <label class="tms-label-checkbox" nz-checkbox [(ngModel)]="checked">确认射线信息无误后勾选此框</label>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="imaging">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Setup Info'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient position</div>
+                            <div class="right-input">
+                              <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择">
+                                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                              </nz-select>
+                            </div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient additional position</div>
+                            <div class="right-input"><input nz-input placeholder="xxxxxxxxxx" [(ngModel)]="value"
+                                [disabled]="true"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">patient setup label</div>
+                            <div class="right-input"><input nz-input placeholder="请输入"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="wedgeSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Referenced Setup Image Sequence'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="flex-add-imgae-div">
+                          <div class="image-info-div FlexRow">
+                            <div class="image-preview-div Fill FlexCol">
+                              <p class="prev-btn" (click)="pre('1111')">&lt;</p>
+                              <nz-carousel [nzDots]="false">
+                                <div class="carousel-img-div" nz-carousel-content *ngFor="let index of imageArray">
+                                  <img class="carousel-img" src="" alt="{{index}}" />
+                                </div>
+                              </nz-carousel>
+                              <p class="next-btn">&gt;</p>
+                            </div>
+                            <div class="img-info">
+                              <span>1</span>/<span>{{imageArray.length}}</span>
+                            </div>
+                          </div>
+                          <div class="flex-btn-div FlexCol">
+                            <button class="add-btn" nz-button nzType="primary">add</button>
+                            <button class="delete-btn" nz-button nzType="primary">delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="boli">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Off Set'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable4 [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable4.data; index as i;">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="blockSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Fixation Device Sequence'" [nzActive]="true">
+                      <div class="common-content-box FlexRow">
+                        <div class="flex-table-div">
+                          <nz-table #colSpanTable5 [nzData]="listOfData" [nzSize]="'small'" nzBordered
+                            [nzShowPagination]="false">
+                            <thead>
+                              <tr>
+                                <th>NO.</th>
+                                <th>beam name</th>
+                                <th>relation type</th>
+                                <th>beam description</th>
+                                <th>meachine name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let data of colSpanTable5.data; index as i;">
+                                <td>{{ data.key }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.type }}</td>
+                                <td>{{ data.desc }}</td>
+                                <td>{{ data.mname }}</td>
+                              </tr>
+                            </tbody>
+                          </nz-table>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="applicatorSequence">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Motion Synchronization'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">呼吸门控</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Motion compensation Technique</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Technique Description</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source ID</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+                <li class="common-info-li" id="referencedPatientSetupNumber">
+                  <nz-collapse [nzBordered]="false">
+                    <nz-collapse-panel [nzHeader]="'Motion Synchronization'" [nzActive]="true">
+                      <div class="common-content-box FlexCol">
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">呼吸门控</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Motion compensation Technique</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Technique Description</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                        <div class="FlexRow common-input-row">
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                          <div class="common-input-box FlexCol">
+                            <div class="left-label">Signal Source ID</div>
+                            <div class="right-input"><input nz-input [(ngModel)]="value" [disabled]="true"
+                                placeholder="xxxxxxxx"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </nz-collapse-panel>
+                  </nz-collapse>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nz-tab>
+      <nz-tab nzTitle="Adaptive">
+        Content of Tab Pane 3
+      </nz-tab>
+    </nz-tabset>
+  </main>
+</div>
